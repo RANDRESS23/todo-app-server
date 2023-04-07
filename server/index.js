@@ -1,3 +1,6 @@
 const app = require('./app')
+const mongoConnection = require('./mongoConnection')
+const { PORT } = require('./config')
 
-app.listen(8081, () => console.log('Server is running'))
+mongoConnection()
+app.listen(PORT, () => console.log('Server is running'))
